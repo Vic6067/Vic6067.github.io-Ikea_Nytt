@@ -2,302 +2,358 @@
 <html lang="en">
     
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to the 1980s</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome to the 1980s</title>
 
 <style>
-    * {
-        box-sizing: border-box;
-    }
 
-    body {
-        margin: 0;
-        font-family: Arial, Helvetica, sans-serif;
-        color: #000000;
-        font-size: 1.7rem;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
-        background-color: white;
-    }
+*{
+  box-sizing:border-box;
+}
 
-    header {
-        background-color: #0058A3;
-        color: #FFDB00;
-        padding: 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-    }
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  color:#000000;
+  font-size:1.7rem;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  background-size:cover;
+  background-color:white;
+}
 
-    /*navigation menu style*/
-    nav {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 15px;
-    }
+/* HEADER */
 
-    nav a {
-        text-decoration: none;
-        color: #FFDB00;
-        font-size: 1.5rem;
-    }
+header{
+  background-color:#0058A3;
+  color:#FFDB00;
+  padding:20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+}
 
-    nav a:hover {
-        text-decoration: underline;
-    }
-    /*navigation menu style*/
+nav{
+  display:flex;
+  flex-wrap:wrap;
+  gap:15px;
+}
 
-    .heading {
-        text-align: center;
-        padding: 80px 20px;
-        background-image: url(80-9.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
+nav a{
+  text-decoration:none;
+  color:#FFDB00;
+  font-size:1.5rem;
+}
 
-    .heading h1 {
-        font-size: 6rem;
-        color: #FFDB00;
-        -webkit-text-stroke: #0058A3 0.5px;
-         text-align: center;
-        font-size: 6rem;
-    }
+nav a:hover{
+  text-decoration:underline;
+}
 
-    .ALLCONTAINER {
-        background-color: rgba(187, 197, 230, 0.6);
-        padding: 70px 150px;
-        margin: 100px;
-        border-radius: 40px;
-        border: 5px solid #0058A3;
-    }
+/* HERO */
 
-    h2 {
-        text-align: center;
-        font-size: 4rem;
-        color: #FFDB00;
-         -webkit-text-stroke: #000000 0.5px;
-        padding: 2px;
-    }
+.heading{
+  text-align:center;
+  padding:80px 20px;
+  background-image:url(80-9.jpg);
+  background-repeat:no-repeat;
+  background-size:cover;
+}
 
-     h3 {
-        text-align: left;
-        font-size: 4rem;
-        color: #000000;
-         -webkit-text-stroke: #000000 0.5px;
-    }
+.heading h1{
+  font-size:6rem;
+  color:#FFDB00;
+  -webkit-text-stroke:#0058A3 0.5px;
+  text-align:center;
+}
 
-    /*This is holding the image and text at the top together DO NOT REMOVE*/
-    .container {
-        position: relative;
-        text-align: center;
-        color: rgb(0, 0, 0);
-    }
+/* MAIN CONTENT CONTAINER */
 
-    .top-right {
-        position: absolute;
-        top: 8px;
-        right: 16px;
-        text-align: left;
-        margin-right: 300px;
-        margin-top: 100px;
-        max-width: 900px;
-        background-color: rgba(255, 255, 255, 0.6);
-        padding: 50px 100px;
-        columns: 2;
-    }
+.ALLCONTAINER{
+  background-color:rgba(187,197,230,0.6);
+  padding:70px 150px;
+  margin:60px auto;
+  max-width:1600px;
+  border-radius:40px;
+  border:5px solid #0058A3;
+}
 
-    .bottom-right {
-    position: absolute;
-    bottom: 8px;
-    right: 16px;
-    text-align: left;
-    margin-right: 300px;
-    margin-top: 700px;
-    margin-bottom: 200px;
-    max-width: 1200px;
-    background-color: rgba(255, 255, 255, 0.6);
-    padding: 50px 100px;
-    columns: 2;
-    }
+h2{
+  text-align:center;
+  font-size:4rem;
+  color:#FFDB00;
+  -webkit-text-stroke:#000000 0.5px;
+  padding:2px;
+}
 
-    /*.top-left {
-    position: absolute;
-    top: 8px;
-    left: 16px;
-    margin-right: 300px;
-    margin-top: 100px;
-    max-width: 500px;
-    max-height: 100;
-    padding: 50px 100px;
-    } 
-    Possibly needed :3*/
+h3{
+  text-align:left;
+  font-size:4rem;
+  color:#000000;
+  -webkit-text-stroke:#000000 0.5px;
+}
 
+/* HERO IMAGE + TEXT */
 
-    .columnA{
-    display:flex;
+.container{
+  position:relative;
+  width:100%;
+}
+
+.hero-img{
+  width:100%;
+  height:auto;
+  display:block;
+  padding:40px;
+}
+
+.top-right{
+  position:absolute;
+  top:30%;
+  right:5%;
+  max-width:40%;
+  background:rgba(255,255,255,0.6);
+  padding:30px;
+  columns:2;
+  text-align:left;
+}
+
+.bottom-right{
+  position:absolute;
+  bottom:30%;
+  right:5%;
+  max-width:60%;
+  background:rgba(255,255,255,0.6);
+  padding:30px;
+  columns:2;
+  text-align:left;
+}
+
+/* CONTENT LIST */
+
+.columnA{
+  display:flex;
+  flex-direction:column;
+  gap:40px;
+}
+
+.item{
+  display:flex;
+  align-items:flex-start;
+  gap:30px;
+  position:relative;
+}
+
+img{
+  max-width:100%;
+  height:auto;
+}
+
+.default{
+  width:100%;
+  height:auto;
+  object-fit:cover;
+  display:block;
+}
+
+/* HOVER IMAGE */
+
+.hover{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  opacity:0;
+  transition:opacity 0.3s ease-in-out;
+}
+
+.item:hover .hover{
+  opacity:1;
+}
+
+.caption{
+  padding:20px 30px;
+  max-width:500px;
+}
+
+.column p{
+  margin-top:0%;
+  max-width:500px;
+}
+
+/* FOOTER */
+
+footer{
+  text-align:center;
+  padding:20px;
+  background-color:#0058A3;
+  color:#FFDB00;
+}
+
+/* ---------- TABLET ---------- */
+
+@media (max-width:1024px){
+
+  .content{
+    columns:2;
+  }
+
+  .top-right,
+  .bottom-right{
+    max-width:60%;
+    columns:1;
+    padding:20px;
+  }
+
+  .columnA{
+    padding:40px 50px;
+  }
+
+  .caption{
+    padding:30px 50px;
+  }
+
+  .ALLCONTAINER{
+    padding:60px 80px;
+    margin:60px auto;
+  }
+
+}
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width:768px){
+
+  header{
     flex-direction:column;
-    gap:40px;
-    }
+    text-align:center;
+  }
 
-    .item{
-    display:flex;
-    align-items:flex-start;
-    gap:30px;
-    }
+  nav{
+    justify-content:center;
+    margin-top:10px;
+  }
 
-    img{
-        width:80%;
-        height:80%;
-    }
+  h3{
+    font-size:2.5rem;
+  }
 
-    p{
-        margin-top: 0%;
-        max-width:400px;
-    }
+  .top-right,
+  .bottom-right{
+    position:static;
+    max-width:100%;
+    margin:20px;
+    columns:1;
+  }
 
-    footer {
-        text-align: center;
-        padding: 20px;
-        background-color: #0058A3;
-        color: #FFDB00;
-    }
+  .content{
+    columns:1;
+  }
 
-    /* ---------- Tablet ---------- */
+  .column,
+  .columnA{
+    flex-direction:column;
+    padding:30px 20px;
+    text-align:center;
+  }
 
-    @media (max-width: 1024px){
+  .caption{
+    padding:20px;
+    max-width:100%;
+  }
 
-    .content{
-        columns:2;
-    }
+  .column p{
+    max-width:100%;
+  }
 
-    .columnA{
-        padding:40px 50px;
-    }
+  .heading{
+    padding:60px 15px;
+  }
 
-    .caption{
-        padding:30px 50px;
-    }
+  .ALLCONTAINER{
+    padding:30px 20px;
+    margin:20px;
+  }
 
-    }
+}
 
-    /* ---------- Mobile ---------- */
-
-    @media (max-width:768px){
-
-    header{
-        flex-direction:column;
-        text-align:center;
-    }
-
-    nav{
-        justify-content:center;
-        margin-top:10px;
-    }
-
-    h3{
-        font-size:2.5rem;
-    }
-
-    /* collapse multi-columns */
-    .content{
-        columns:1;
-    }
-
-    /* stack rows */
-    .column,
-    .columnA{
-        flex-direction:column;
-        padding:30px 20px;
-        text-align:center;
-    }
-
-    .caption{
-        padding:20px;
-        max-width:100%;
-        justify-content:center;
-    }
-
-    /* fix small captions */
-    .column p{
-        max-width:100%;
-    }
-
-    .heading{
-        padding:60px 15px;
-    }
-
-    }
 </style>
 </head>
+
 <body>
 
-    <header>
-    <h2>Ikéa-Nytt</h2>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="1990s.html">Move to the 1990s</a>
-    </nav>
-    </header>
+<header>
+<h2>Ikéa-Nytt</h2>
 
-    <section class="heading">
-        <h1>IKEA 1980</h1>
-    </section>
+<nav>
+<a href="index.html">Home</a>
+<a href="1990s.html">Move to the 1990s</a>
+</nav>
+</header>
 
-    <!--The text and image at the top under the header--->
-    <div class="container">
-        <img src="80-6.png" alt="80s" style="width:100%;">
+<section class="heading">
+<h1>IKEA 1980</h1>
+</section>
 
+<!-- HERO IMAGE + TEXT -->
 
-        <div class="top-right">
-            <h3>
-            HEADING
-            </h3>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-        </div>
-        
-        <div class="bottom-right">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-        </div>
-    </div>
-    
-    <!--ALLCONTAINER holdss all the content under the header and first image-->
-    <section class="ALLCONTAINER">
+<div class="container">
 
-    <h3>HEADING</h3>
+<img src="80-6.png" alt="80s" class="hero-img">
 
-    <!--Second section with LIST--->
+<div class="top-right">
+<h3>HEADING</h3>
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+</div>
 
-   <div class="columnA">
-
-    <div class="item">
-        <img src="80-1.png" alt="IKEA 1978 catalogue cover">
-        <p>This will be a caption for the image</p>
-    </div>
-
-    <div class="item">
-        <img src="80-2.png" alt="IKEA 1978 catalogue cover">
-        <p>This will be a caption for the image</p>
-    </div>
-
-    <div class="item">
-        <img src="80-3.png" alt="IKEA 1978 catalogue cover">
-        <p>This will be a caption for the image</p>
-    </div>
-
-    <div class="item">
-        <img src="80-9.jpg" alt="Flowery couch catalogue page">
-        <p>This will be a caption for the image</p>
-    </div>
+<div class="bottom-right">
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
+</div>
 
 </div>
-    </section>
 
-    <footer>
-        <p2>Thank you for coming!</p2>
-    </footer>
+<!-- MAIN CONTENT -->
+
+<section class="ALLCONTAINER">
+
+<h3>HEADING</h3>
+
+<div class="columnA">
+
+<div class="item">
+<img class="default" src="80-1.png" alt="IKEA 1978 catalogue cover">
+<img class="hover" src="80-10.png" alt="IKEA 1978 catalogue cover">
+<p>This will be a caption for the image</p>
+</div>
+
+<div class="item">
+<img class="default" src="80-2.png" alt="IKEA 1978 catalogue cover">
+<img class="hover" src="80-11.png" alt="IKEA 1978 catalogue cover">
+<p>This will be a caption for the image</p>
+</div>
+
+<div class="item">
+<img class="default" src="80-3.png" alt="IKEA 1978 catalogue cover">
+<img class="hover" src="80-12.png" alt="IKEA 1978 catalogue page">
+<p>This will be a caption for the image</p>
+</div>
+
+<div class="item">
+<img class="default" src="80-9.jpg" alt="Flowery couch catalogue page">
+<img class="hover" src="80-13.png" alt="Flowery couch catalogue page">
+<p>This will be a caption for the image</p>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+<p>Thank you for coming!</p>
+</footer>
 
 </body>
 </html>
