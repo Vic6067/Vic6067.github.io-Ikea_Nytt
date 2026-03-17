@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome to the 2000s</title>
+
+<style>
+
+*{
+box-sizing:border-box;
+margin:0;
+}
+
+body{
+font-family:Arial, Helvetica, sans-serif;
+background:#f5f5f5;
+padding:40px;
+}
+
+/* HEADER */
+
+header{
+background-color:#0058A3;
+color:#FFDB00;
+padding:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+}
+
+nav{
+display:flex;
+flex-wrap:wrap;
+gap:15px;
+}
+
+nav a{
+text-decoration:none;
+color:#FFDB00;
+font-size:1.5rem;
+}
+
+nav a:hover{
+text-decoration:underline;
+}
+
+/* HERO */
+
+.heading{
+text-align:center;
+padding:80px 20px;
+background-image:url(90-3.png);
+background-repeat:no-repeat;
+background-size:cover;
+}
+
+.heading h1{
+font-size:9rem;
+font-family:'Times New Roman', Times, serif;
+color:#FFDB00;
+-webkit-text-stroke:#0058A3 0.5px;
+text-align:left;
+}
+
+h2{
+text-align:center;
+font-size:4rem;
+color:#FFDB00;
+-webkit-text-stroke:#000000 0.5px;
+padding:2px;
+}
+
+h3{
+font-size:2rem;
+margin-bottom:10px;
+}
+
+/* MAIN CONTAINER */
+
+.ALLCONTAINER{
+background-color:#ffffff;
+padding:50px 100px;
+margin:40px auto;
+max-width:1600px;
+border-radius:40px;
+border:5px solid #ffffff;
+}
+
+.page{
+max-width:1100px;
+margin:auto;
+background:white;
+padding:20px;
+}
+
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:2fr 1fr;
+gap:20px;
+align-items:start;
+}
+
+/* LEFT IMAGE */
+
+.Limage img{
+width:100%;
+display:block;
+}
+
+.left-p{
+columns:2;
+padding:20px;
+line-height:1.6;
+}
+
+/* RIGHT COLUMN */
+
+.side{
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+.side-img img{
+width:100%;
+height:auto;
+display:block;
+}
+
+.right-p{
+padding:20px;
+line-height:1.6;
+}
+
+/* BOTTOM IMAGE SECTION */
+
+.below-column{
+margin-top:60px;
+display:flex;
+flex-direction:column;
+gap:60px;
+}
+
+/* IMAGE + CAPTION */
+
+.img{
+display:flex;
+align-items:flex-start; /* FIX: aligns text to top of image */
+gap:40px;
+}
+
+.img img{
+width:45%;
+height:auto;
+border-radius:10px;
+}
+
+.caption{
+width:55%;
+font-size:1.2rem;
+line-height:1.6;
+}
+
+/* ALTERNATE IMAGE SIDES */
+
+.img:nth-child(even){
+flex-direction:row-reverse;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:20px;
+background-color:#0058A3;
+color:#FFDB00;
+margin-top:40px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h2>Ikéa-Nytt</h2>
+
+<nav>
+<a href="index.html">Home</a>
+</nav>
+</header>
+
+<section class="heading">
+<h1>IKEA 1990</h1>
+</section>
+
+<section class="ALLCONTAINER">
+
+<h2 style="text-align: left; margin-left: 200px;">
+HEADING
+</h2>
+
+<div class="page">
+
+<div class="grid">
+
+<!-- LEFT IMAGE -->
+
+<div class="Limage">
+<img src="20-1.png" alt="kitchen">
+
+<p class="left-p">
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+</p>
+
+</div>
+
+<!-- RIGHT SIDE -->
+
+<div class="side">
+
+<div class="side-img">
+<img src="20-2.png" alt="IKEA catalogue detail">
+</div>
+
+<div class="side-img">
+<img src="20-3.png" alt="IKEA catalogue detail">
+</div>
+
+<p class="right-p">
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- BOTTOM IMAGE SECTION WITH CAPTIONS -->
+
+<section class="below-column">
+
+<div class="img">
+
+<img src="20-4.png" alt="IKEA storage system">
+
+<div class="caption">
+<h3>Heading 1</h3>
+<p>
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+It has survived not only five centuries, but also the leap into electronic typesetting, 
+remaining essentially unchanged. It was popularised in the 1960s with the release of 
+Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing 
+software like Aldus PageMaker including versions of Lorem Ipsum.
+</p>
+</div>
+
+</div>
+
+
+<div class="img">
+
+<img src="20-5.png" alt="IKEA modern furniture">
+
+<div class="caption">
+<h3>Heading 2</h3>
+<p>
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+It has survived not only five centuries, but also the leap into electronic typesetting, 
+remaining essentially unchanged. It was popularised in the 1960s with the release of 
+Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing 
+software like Aldus PageMaker including versions of Lorem Ipsum.
+</p>
+</div>
+
+</div>
+
+
+<div class="img">
+
+<img src="20-6.png" alt="IKEA kitchen design">
+
+<div class="caption">
+<h3>Heading 3</h3>
+<p>
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+It has survived not only five centuries, but also the leap into electronic typesetting, 
+remaining essentially unchanged. It was popularised in the 1960s with the release of 
+Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing 
+software like Aldus PageMaker including versions of Lorem Ipsum.
+</p>
+</div>
+
+</div>
+
+</section>
+
+</section>
+
+<footer>
+<p>Thank you for coming!</p>
+</footer>
+
+</body>
+</html>
