@@ -16,7 +16,7 @@ body{
   margin:0;
   font-family:Arial, Helvetica, sans-serif;
   color:#000000;
-  font-size:1.7rem;
+  font-size: 1rem;
   background-repeat:no-repeat;
   background-attachment:fixed;
   background-size:cover;
@@ -24,34 +24,86 @@ body{
 }
 
 /* HEADER */
-
-header{
-  background-color:#0058A3;
-  color:#FFDB00;
-  padding:20px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  flex-wrap:wrap;
+ header {
+     background-color: #0058A3;
+    padding: 20px 20px;
 }
 
-nav{
-  display:flex;
-  flex-wrap:wrap;
-  gap:15px;
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-nav a{
-  text-decoration:none;
-  color:#FFDB00;
-  font-size:1.5rem;
+nav h2 {
+    color: #FFDB00;
+    margin: 10px 0;
+    font-size: 1.5rem;
 }
 
-nav a:hover{
-  text-decoration:underline;
+#menu-toggle {
+    display: none;
 }
 
-/* HERO */
+.menu-icon {
+    display: none;
+    font-size: 28px;
+    color: #FFDB00;
+    cursor: pointer;
+}
+
+/* NAV MENU */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    color: #FFDB00;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+nav ul li a:hover {
+    background-color: #0a4f8d;
+    border-radius: 5px;
+}
+
+/* DROPDOWN */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #dde6f9;
+    border-radius: 10px;
+    min-width: 150px;
+}
+
+.dropdown-menu li a {
+    padding: 10px 15px;
+    color: black;
+}
+
+/* Desktop hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Mobile tap */
+.dropdown:focus-within .dropdown-menu {
+    display: block;
+}
 
 .heading{
   text-align:center;
@@ -62,7 +114,7 @@ nav a:hover{
 }
 
 .heading h1{
-  font-size:9rem;
+  font-size: 6rem;
   font-family:'Times New Roman', Times, serif;
   color:#FFDB00;
   -webkit-text-stroke:#0058A3 0.5px;
@@ -78,14 +130,6 @@ nav a:hover{
   max-width:1600px;
   border-radius:40px;
   border:5px solid #ffffff;
-}
-
-h2{
-  text-align:center;
-  font-size:4rem;
-  color:#FFDB00;
-  -webkit-text-stroke:#000000 0.5px;
-  padding:2px;
 }
 
 h3{
@@ -177,43 +221,38 @@ p{
 
 /* FOOTER */
 
-footer{
+.footer{
   text-align:center;
   padding:20px;
   background-color:#0058A3;
   color:#FFDB00;
 }
 
-/* ---------- TABLET ---------- */
-
-@media (max-width:1024px){
-
-  .top-right,
-  .bottom-right{
-    max-width:60%;
-    columns:1;
-    padding:20px;
-  }
-
-  .ALLCONTAINER{
-    padding:60px 80px;
-  }
-
+/*This is the mobile responsive code copied from index.html (sourced from AI originally)*/
+@media (max-width:768px){
+  
+    .menu-icon {
+    display: block;
 }
 
-/* ---------- MOBILE ---------- */
+nav ul {
+    width: 100%;
+    flex-direction: column;
+    display: none;
+    background-color: #0874d3;
+}
 
-@media (max-width:768px){
+/* Toggle menu */
+.menu-icon + ul {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    display: flex;
+}
 
-  header{
-    flex-direction:column;
-    text-align:center;
-  }
-
-  nav{
-    justify-content:center;
-    margin-top:10px;
-  }
+nav ul li a {
+    padding: 15px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
 
   h3{
     font-size:2.5rem;
@@ -232,13 +271,18 @@ footer{
   }
 
   .ALLCONTAINER{
-    padding:30px 20px;
+    padding: 50px 10px;
     margin:20px;
   }
 
   .item-with-caption{
     flex-direction:column;
   }
+
+  .column {
+    flex-direction: column;
+    padding: 20px;
+}
 
 }
 
@@ -248,12 +292,32 @@ footer{
 <body>
 
 <header>
-<h2>Ikéa-Nytt</h2>
 
 <nav>
-<a href="index.html">Home</a>
-<a href="2000s.html">Move to the 2000s</a>
+    <h2>Ikéa-Nytt</h2>
+
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon"></label>
+
+    <ul>
+        <li><a href="index.html">Home</a></li>
+
+        <li class="dropdown">
+            <a href="#">Decades</a>
+            <ul class="dropdown-menu">
+                <li><a href="1950s.html">1950s</a></li>
+                <li><a href="1960s.html">1960s</a></li>
+                <li><a href="1970s.html">1970s</a></li>
+                <li><a href="1980s.html">1980s</a></li>
+                <li><a href="1990s.html">1990s</a></li>
+                <li><a href="2000s.html">2000s</a></li>
+            </ul>
+        </li>
+
+        <li><a href="ABOUT.html">Sources</a></li>
+    </ul>
 </nav>
+
 </header>
 
 <section class="heading">
@@ -342,9 +406,9 @@ The IKEA catalog became a global inspiration, showcasing complete room ideas and
 
 </section>
 
-<footer>
-<p>Thank you for exploring IKEA in the 1990s!</p>
-</footer>
+<div class="footer">
+    <a style="color: #FFDB00;" href="1990s.html">Back to top</a>
+</div>
 
 </body>
 </html>
