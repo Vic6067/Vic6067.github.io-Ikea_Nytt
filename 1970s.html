@@ -14,35 +14,89 @@ body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     color: #000;
-    font-size: 1.7rem;
-    background-color: papayawhip;
+    font-size: 1rem;
+    background-color: rgb(245, 245, 245);
 }
 
 header {
-    background-color: #FFDB00;
-    color: #0058A3;
-    padding: 20px;
+     background-color: #FFDB00;
+    padding: 20px 20px;
+}
+
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
 }
 
-nav {
-    display: flex;
-    gap: 15px;
+nav h2 {
+    color: #0058A3;
+    margin: 10px 0;
 }
 
-nav a {
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 28px;
+    color: #0058A3;
+    cursor: pointer;
+}
+
+/* NAV MENU */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    display: block;
+    padding: 20px;
     text-decoration: none;
     color: #0058A3;
-    font-size: 1.5rem;
+    font-weight: bold;
+    font-size: 1rem;
 }
 
-nav a:hover {
-    text-decoration: underline;
+nav ul li a:hover {
+    background-color: #ffc635;
+    border-radius: 5px;
 }
 
+/* DROPDOWN */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f9f6dd;
+    border-radius: 10px;
+    min-width: 150px;
+}
+
+.dropdown-menu li a {
+    padding: 10px 15px;
+    color: black;
+}
+
+/* Desktop hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Mobile tap (focus) */
+.dropdown:focus-within .dropdown-menu {
+    display: block;
+}
 .heading {
     text-align: center;
     padding: 80px 20px;
@@ -52,7 +106,7 @@ nav a:hover {
 }
 
 .heading h1 {
-    font-size: 4rem;
+    font-size:6rem;
     color: #0058A3;
     margin: 0;
 }
@@ -61,8 +115,7 @@ nav a:hover {
 .ALLCONTAINER{
     background-color:#fff;
     padding:40px;
-    margin:40px auto;
-    max-width:1400px;
+    max-width:1200px;
     border-radius:30px;
 }
 
@@ -75,7 +128,7 @@ img{
 .row {
     display: flex;
     gap: 30px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     align-items: flex-start;
     flex-wrap: wrap;
 }
@@ -84,25 +137,18 @@ img{
     flex: 1 1 300px;
 }
 
-.text-box {
-    flex: 2 1 400px;
-}
-
-.caption {
-    font-size: 0.95rem;
-    max-width: 300px;
-}
 
 /* TITLES */
 h3 {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #0058A3;
 }
 
 h4 {
     margin-bottom: 10px;
     color: #0058A3;
+    font-size: 1.5rem;
 }
 
 .interactive-image{
@@ -130,17 +176,48 @@ h4 {
   opacity:1;
 }
 
+p{
+    font-size: 1rem;
+}
 
 /* FOOTER */
-footer {
+.footer {
     text-align: center;
     padding: 20px;
     background-color: #FFDB00;
-    color: #0058A3;
 }
 
 /* RESPONSIVE */
 @media (max-width:768px){
+
+    .menu-icon {
+    display: block;
+}
+
+nav ul {
+    width: 100%;
+    flex-direction: column;
+    display: none;
+    background-color: #ffe95a;
+}
+
+/* Toggle menu */
+.menu-icon + ul {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    display: flex;
+}
+
+nav ul li a {
+    padding: 15px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+/* Dropdown becomes inline */
+.dropdown-menu {
+    position: static;
+    border-radius: 0;
+}
     .row {
         flex-direction: column;
     }
@@ -156,11 +233,32 @@ footer {
 <body>
 
 <header>
-<h2>Ikéa-Nytt</h2>
+
 <nav>
-    <a href="index.html">Home</a>
-    <a href="1980s.html">Move to the 1980s</a>
+    <h2>Ikéa-Nytt</h2>
+
+    <input type="checkbox" id="menu-toggle">
+    <label class="menu-icon"></label>
+
+    <ul>
+        <li><a href="index.html">Home</a></li>
+
+        <li class="dropdown">
+            <a href="#">Decades</a>
+            <ul class="dropdown-menu">
+                <li><a href="1950s.html">1950s</a></li>
+                <li><a href="1960s.html">1960s</a></li>
+                <li><a href="1970s.html">1970s</a></li>
+                <li><a href="1980s.html">1980s</a></li>
+                <li><a href="1990s.html">1990s</a></li>
+                <li><a href="2000s.html">2000s</a></li>
+            </ul>
+        </li>
+
+        <li><a href="ABOUT.html">Sources</a></li>
+    </ul>
 </nav>
+
 </header>
 
 <section class="heading">
@@ -181,7 +279,7 @@ footer {
     </div>
     <div class="text-box">
         <h4>A Shift Towards the Future</h4>
-        <p>
+        <p style="max-width: 500px;">
             The 70s were all about wacky textures and sustainable practices. You can see IKEA shifting to a more environmental 
             approach with the reuse of fabrics and multipurpose materials.
         </p>
@@ -206,7 +304,7 @@ footer {
             <img class="default"src="70-3.png" style="height: 100%;">
             <img class="hover" src="70-10.png" style="height: 100%;">
         </div>
-        <p class="caption">This is the cover for the IKEA 79 and 77 catalogues.</p>
+        <p>This is the cover for the IKEA 79 and 77 catalogues.</p>
     </div>
 
     <div class="img-box">
@@ -223,7 +321,7 @@ footer {
     <div class="img-box">
         <img src="70-5.png">
     </div>
-    <p class="text-box">
+    <p style="max-width: 500px;">
         IKEA began to arrange furniture in a way that you could tell every individual product apart from the setting. 
     </p>
 </div>
@@ -249,9 +347,9 @@ footer {
 
 </section>
 
-<footer>
-    <p>Thank you for coming!</p>
-</footer>
+<div class="footer">
+    <a style=" color: #0058A3;" href="1970s.html">Back to top</a>
+</div>
 
 </body>
 </html>
